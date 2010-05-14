@@ -1,15 +1,20 @@
-.buddyicon {
+.x-buddyicon
+{
 	display: none;
 }
 
-.mask {
-	display: none;
-}
-
-p {
-	padding-right: 1px;
-}
-
-.sender {
+.x-sender
+{
 	padding-right: 41px;
+}
+
+.firstFocus.message .x-text:before
+{
+	right: 12px;
+}
+
+.firstFocus.status .x-text:before,
+.firstFocus.event .x-text:before
+{
+	right: 10px;
 }

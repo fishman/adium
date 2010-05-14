@@ -1,81 +1,79 @@
-body {
-	background-color: #f8f0f0;
+body,
+#topic,
+.status .x-wrap,
+.event .x-wrap
+{
+	background-color: rgba(248, 240, 240, .8);
 }
 
-#curtain {
-	background-color: rgba(255,255,255,0.8);
+.incoming .x-buddyicon
+{
+	background: rgba(75, 93, 178, .2);
 }
 
-.incoming .buddyicon {
-	background: rgba(75,93,178,0.2);
-}
-
-.incoming .topleft {
-	background: no-repeat url(../images/indigo/topleft.png);
-}
-
-.incoming .sender {
+.incoming .x-sender
+{
 	background: #4b5db2;
 }
 
-.incoming .protocol
+.incoming .x-time
 {
-	background: no-repeat url(../images/indigo/topright.png) right;
-}
-
-.incoming .time_consecutive, .incoming .time_initial {
 	color: #4b5db2;
 }
 
-.incoming .message
+.incoming .x-message
 {
-	background: rgba(213,211,228,0.9);
+	background: rgba(213, 211, 228, .9);
+	border-top: 1px solid #4b5db2;
 }
 
-.incoming .time_consecutive + div {
-	border-top: 1px solid rgba(75,93,178,0.4);
+.incoming.consecutive .x-message
+{
+	border-top: 1px solid rgba(75, 93, 178, .4);
 }
 
 .incoming a:hover
 {
 	background: #4b5db2;
-	color: white;
 }
 
-.outgoing .buddyicon {
-	background: rgba(177,74,75,0.2);
+.incoming a
+{
+	color: #4b5db2;
 }
 
-.outgoing .topleft {
-	background: no-repeat url(../images/maroon/topleft.png);
+.outgoing .x-buddyicon
+{
+	background: rgba(177, 74, 75, .2);
 }
 
-.outgoing .sender {
+.outgoing .x-sender
+{
 	background: #b14a4b;
 }
 
-.outgoing .protocol
+.outgoing .x-time
 {
-	background: no-repeat url(../images/maroon/topright.png) right;
-}
-
-.outgoing .time_consecutive, .outgoing .time_initial {
 	color: #b14a4b;
 }
 
-.outgoing .message {
-	background: rgba(233,207,207,0.9);
+.outgoing .x-message
+{
+	background: rgba(233, 207, 207, .9);
+	border-top: 1px solid #b14a4b;
 }
 
-.outgoing .time_consecutive + div {
-	border-top: 1px solid rgba(177,74,75,0.4);
+.outgoing.consecutive .x-message
+{
+	border-top: 1px solid rgba(177, 74, 75, .4);
 }
 
-.outgoing a:hover {
+.outgoing a
+{
+	color: #b14a4b;
+}
+
+.outgoing a:hover
+{
 	background: #b14a4b;
-	color: white;
-}
-
-.status_container {
-	background: rgba(248,240,240,0.8);
 }

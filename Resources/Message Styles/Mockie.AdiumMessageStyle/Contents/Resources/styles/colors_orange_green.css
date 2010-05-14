@@ -1,81 +1,79 @@
-body {
-	background-color: #f2fbee;
+body,
+#topic,
+.status .x-wrap,
+.event .x-wrap
+{
+	background-color: rgba(242, 251, 238, .8);
 }
 
-#curtain {
-	background-color: rgba(255,255,255,0.8);
+.incoming .x-buddyicon
+{
+	background: rgba(255, 124, 0, .2);
 }
 
-.incoming .buddyicon {
-	background: rgba(255,124,0,0.2);
-}
-
-.incoming .topleft {
-	background: no-repeat url(../images/orange/topleft.png);
-}
-
-.incoming .sender {
+.incoming .x-sender
+{
 	background: #FF7C00;
 }
 
-.incoming .protocol
+.incoming .x-time
 {
-	background: no-repeat url(../images/orange/topright.png) right;
-}
-
-.incoming .time_consecutive, .incoming .time_initial {
 	color: #FF7C00;
 }
 
-.incoming .message {
-	background: rgba(244,225,190,0.9);
+.incoming .x-message
+{
+	background: rgba(244, 225, 190, .9);
+	border-top: 1px solid #FF7C00;
 }
 
-.incoming .time_consecutive + div {
-	border-top: 1px solid rgba(255,124,0,0.4);
+.incoming.consecutive .x-message
+{
+	border-top: 1px solid rgba(255, 124, 0, .4);
 }
 
-.incoming a:hover {
+.incoming a:hover
+{
 	background: #FF7C00;
-	color: white;
 }
 
-.outgoing .buddyicon {
-	background: rgba(102,204,50,0.2);
+.incoming a
+{
+	color: #FF7C00;
 }
 
-.outgoing .topleft {
-	background: no-repeat url(../images/green/topleft.png);
+.outgoing .x-buddyicon
+{
+	background: rgba(102, 204, 50, .2);
 }
 
-.outgoing .sender {
+.outgoing .x-sender
+{
 	background: #66CC32;
 }
 
-.outgoing .protocol
+.outgoing .x-time
 {
-	background: no-repeat url(../images/green/topright.png) right;
-}
-
-.outgoing .time_consecutive, .outgoing .time_initial {
 	color: #66CC32;
 }
 
-.outgoing .message
+.outgoing .x-message
 {
-	background: rgba(213,241,200,0.9);
+	background: rgba(213, 241, 200, .9);
+	border-top: 1px solid #66CC32;
 }
 
-.outgoing .time_consecutive + div {
-	border-top: 1px solid rgba(102,204,50,0.4);
+.outgoing.consecutive .x-message
+{
+	border-top: 1px solid rgba(102, 204, 50, .4);
+}
+
+.outgoing a
+{
+	color: #66CC32;
 }
 
 .outgoing a:hover
 {
 	background: #66CC32;
-	color: white;
-}
-
-.status_container {
-	background-color: rgba(242,251,238,0.8);
 }
