@@ -334,8 +334,6 @@
 		3461621706FB482D009181D8 /* UserList Layout.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3461621306FB482D009181D8 /* UserList Layout.plist */; };
 		346196F20D31607500763051 /* SRSnapback.png in Resources */ = {isa = PBXBuildFile; fileRef = 346196F10D31607500763051 /* SRSnapback.png */; };
 		346371080BCA0A5400AD57AD /* AIMessageTabSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 346371060BCA0A5400AD57AD /* AIMessageTabSplitView.m */; };
-		346544DB0C8F686B0046ED68 /* AMPurpleJabberXMLConsole.xib in Resources */ = {isa = PBXBuildFile; fileRef = 346544D90C8F686B0046ED68 /* AMPurpleJabberXMLConsole.xib */; };
-		346544DC0C8F686B0046ED68 /* AMPurpleJabberDiscoveryBrowser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 346544DA0C8F686B0046ED68 /* AMPurpleJabberDiscoveryBrowser.xib */; };
 		3465451C0C8F6A670046ED68 /* AMPurpleJabberServiceDiscoveryBrowserController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3465451A0C8F6A670046ED68 /* AMPurpleJabberServiceDiscoveryBrowserController.h */; };
 		3465451D0C8F6A670046ED68 /* AMPurpleJabberServiceDiscoveryBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3465451B0C8F6A670046ED68 /* AMPurpleJabberServiceDiscoveryBrowserController.m */; };
 		346545250C8F6AAD0046ED68 /* AMPurpleJabberNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 346545230C8F6AAD0046ED68 /* AMPurpleJabberNode.h */; };
@@ -1052,8 +1050,6 @@
 		4F1CB64C0D640F4F0073A1E6 /* ContactInfoInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F1CB64B0D640F4F0073A1E6 /* ContactInfoInspector.xib */; };
 		5A1781860EC1215D00BA1E04 /* AIAutoScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1781850EC1215D00BA1E04 /* AIAutoScrollTextView.m */; };
 		5A17D65D130F76B4002C852F /* AIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A17D65C130F76B4002C852F /* AIGradientView.m */; };
-		5A1E24A915BC746B003A6F9E /* AIAdvancedPreferencePane.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1E24A715BC746B003A6F9E /* AIAdvancedPreferencePane.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A1E24AA15BC746B003A6F9E /* AIAdvancedPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E24A815BC746B003A6F9E /* AIAdvancedPreferencePane.m */; };
 		5A1E3A1214DCE60400724574 /* Preferences-Xtras.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E3A1114DCE60400724574 /* Preferences-Xtras.xib */; };
 		5A22D6E214834F44004E15F7 /* AIFacebookXMPPAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A22D6E014834F44004E15F7 /* AIFacebookXMPPAccountView.xib */; };
 		5A27FA7D14A272330063489D /* pref-messagehistory.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A27FA7914A272330063489D /* pref-messagehistory.png */; };
@@ -1370,6 +1366,11 @@
 		76889DEB12D3CA17007AEF00 /* get-info.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 76889DEA12D3CA17007AEF00 /* get-info.tiff */; };
 		76889DEF12D3CA40007AEF00 /* Personal.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 76889DEE12D3CA40007AEF00 /* Personal.tiff */; };
 		76C1AF9C125A906A00D269A9 /* AIAdiumURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C1AF9B125A906A00D269A9 /* AIAdiumURLProtocol.m */; };
+		76FF925A14B524B40043E23B /* AIIRCConsoleController.h in Headers */ = {isa = PBXBuildFile; fileRef = 76FF925814B524B40043E23B /* AIIRCConsoleController.h */; };
+		76FF925B14B524B40043E23B /* AIIRCConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FF925914B524B40043E23B /* AIIRCConsoleController.m */; };
+		76FF926414B62A980043E23B /* AIConsole.nib in Resources */ = {isa = PBXBuildFile; fileRef = 76FF926314B62A980043E23B /* AIConsole.nib */; };
+		76FF926714B62AB80043E23B /* AIConsoleController.h in Headers */ = {isa = PBXBuildFile; fileRef = 76FF926514B62AB80043E23B /* AIConsoleController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76FF926814B62AB80043E23B /* AIConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FF926614B62AB80043E23B /* AIConsoleController.m */; };
 		7E6F8A94105611B700C6D80D /* libotr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6F8A93105611B700C6D80D /* libotr.framework */; };
 		7E6F8ACD105613AD00C6D80D /* libotr.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6F8A93105611B700C6D80D /* libotr.framework */; };
 		7E824CDD06387FAF00813072 /* LinkEditor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E824CCE06387FAF00813072 /* LinkEditor.xib */; };
@@ -1400,8 +1401,8 @@
 		8184C5B80C1B812500CB53E7 /* AMPurpleRequestFieldsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8184C5B30C1B812500CB53E7 /* AMPurpleRequestFieldsWindow.xib */; };
 		8184CC350C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.h in Headers */ = {isa = PBXBuildFile; fileRef = 8184CC330C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.h */; };
 		8184CC360C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 8184CC340C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.m */; };
-		818E96A30C16D443007623BD /* AMXMLConsoleController.h in Headers */ = {isa = PBXBuildFile; fileRef = 818E96A10C16D443007623BD /* AMXMLConsoleController.h */; };
-		818E96A40C16D443007623BD /* AMXMLConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E96A20C16D443007623BD /* AMXMLConsoleController.m */; };
+		818E96A30C16D443007623BD /* AIJabberConsoleController.h in Headers */ = {isa = PBXBuildFile; fileRef = 818E96A10C16D443007623BD /* AIJabberConsoleController.h */; };
+		818E96A40C16D443007623BD /* AIJabberConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818E96A20C16D443007623BD /* AIJabberConsoleController.m */; };
 		81DAE8720C261E8A00780E4C /* AMPurpleTuneTooltip.h in Headers */ = {isa = PBXBuildFile; fileRef = 81DAE8700C261E8A00780E4C /* AMPurpleTuneTooltip.h */; };
 		81DAE8730C261E8A00780E4C /* AMPurpleTuneTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAE8710C261E8A00780E4C /* AMPurpleTuneTooltip.m */; };
 		81DAED520C26F4F700780E4C /* AMPurpleJabberServiceDiscoveryBrowsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 81DAED500C26F4F700780E4C /* AMPurpleJabberServiceDiscoveryBrowsing.h */; };
@@ -1415,8 +1416,6 @@
 		9719C9301530EE4800217FBE /* ShortcutRecorder.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 9719C92D1530EE0C00217FBE /* ShortcutRecorder.framework */; };
 		9722ABC813257D7F00CAB486 /* ContactListWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9722ABC713257D7F00CAB486 /* ContactListWindow.xib */; };
 		9760D24613E49A560031FA1A /* AboutDialog_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9760D24513E49A560031FA1A /* AboutDialog_bg.png */; };
-		979AA6A714D59DC8008730DF /* AIBoolToControlTextColorTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 979AA6A514D59DC8008730DF /* AIBoolToControlTextColorTransformer.h */; settings = {ATTRIBUTES = (); }; };
-		979AA6A814D59DC8008730DF /* AIBoolToControlTextColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 979AA6A614D59DC8008730DF /* AIBoolToControlTextColorTransformer.m */; };
 		97AF5CDB13191DE200550C41 /* AIContactListUserPictureMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AF5CDA13191DE200550C41 /* AIContactListUserPictureMenuController.m */; };
 		97AF5CF413191E9A00550C41 /* ContactListChangeUserPictureMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AF5CF313191E9A00550C41 /* ContactListChangeUserPictureMenu.xib */; };
 		97E4B4FF13E7490000A8BA53 /* AboutDialog_transp_btm.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E4B4FB13E7490000A8BA53 /* AboutDialog_transp_btm.png */; };
@@ -2782,8 +2781,6 @@
 		3465235308371A3F009565FE /* zh_CN */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = zh_CN; path = "Plugins/Purple Service/Resources/zh_CN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3465236508371A64009565FE /* cs */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = cs; path = "Plugins/Purple Service/Resources/cs.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3465236808371A65009565FE /* cs */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = cs; path = Resources/cs.lproj/Localizable.strings; sourceTree = "<group>"; };
-		346544D90C8F686B0046ED68 /* AMPurpleJabberXMLConsole.xib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xib; name = AMPurpleJabberXMLConsole.xib; path = "Plugins/Purple Service/AMPurpleJabberXMLConsole.xib"; sourceTree = "<group>"; };
-		346544DA0C8F686B0046ED68 /* AMPurpleJabberDiscoveryBrowser.xib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xib; name = AMPurpleJabberDiscoveryBrowser.xib; path = "Plugins/Purple Service/AMPurpleJabberDiscoveryBrowser.xib"; sourceTree = "<group>"; };
 		3465451A0C8F6A670046ED68 /* AMPurpleJabberServiceDiscoveryBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMPurpleJabberServiceDiscoveryBrowserController.h; path = "Plugins/Purple Service/AMPurpleJabberServiceDiscoveryBrowserController.h"; sourceTree = "<group>"; };
 		3465451B0C8F6A670046ED68 /* AMPurpleJabberServiceDiscoveryBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMPurpleJabberServiceDiscoveryBrowserController.m; path = "Plugins/Purple Service/AMPurpleJabberServiceDiscoveryBrowserController.m"; sourceTree = "<group>"; };
 		346545230C8F6AAD0046ED68 /* AMPurpleJabberNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMPurpleJabberNode.h; path = "Plugins/Purple Service/AMPurpleJabberNode.h"; sourceTree = "<group>"; };
@@ -4392,6 +4389,11 @@
 		76889DEE12D3CA40007AEF00 /* Personal.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Personal.tiff; path = Resources/Personal.tiff; sourceTree = "<group>"; };
 		76C1AF9A125A906A00D269A9 /* AIAdiumURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIAdiumURLProtocol.h; path = "Plugins/WebKit Message View/AIAdiumURLProtocol.h"; sourceTree = "<group>"; };
 		76C1AF9B125A906A00D269A9 /* AIAdiumURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIAdiumURLProtocol.m; path = "Plugins/WebKit Message View/AIAdiumURLProtocol.m"; sourceTree = "<group>"; };
+		76FF925814B524B40043E23B /* AIIRCConsoleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIIRCConsoleController.h; path = "Plugins/Purple Service/AIIRCConsoleController.h"; sourceTree = "<group>"; };
+		76FF925914B524B40043E23B /* AIIRCConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIIRCConsoleController.m; path = "Plugins/Purple Service/AIIRCConsoleController.m"; sourceTree = "<group>"; };
+		76FF926314B62A980043E23B /* AIConsole.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = AIConsole.nib; path = "Frameworks/Adium Framework/Resources/AIConsole.nib"; sourceTree = "<group>"; };
+		76FF926514B62AB80043E23B /* AIConsoleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIConsoleController.h; path = "Frameworks/Adium Framework/Source/AIConsoleController.h"; sourceTree = "<group>"; };
+		76FF926614B62AB80043E23B /* AIConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIConsoleController.m; path = "Frameworks/Adium Framework/Source/AIConsoleController.m"; sourceTree = "<group>"; };
 		77D903500B78CF1000B86C42 /* zhm */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = zhm; path = "Plugins/Purple Service/zhm"; sourceTree = "<group>"; };
 		7E1E8176063A3EEC00EB00F7 /* AIContextMenuTextView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIContextMenuTextView.h; path = "Frameworks/Adium Framework/Source/AIContextMenuTextView.h"; sourceTree = "<group>"; };
 		7E1E8177063A3EEC00EB00F7 /* AIContextMenuTextView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIContextMenuTextView.m; path = "Frameworks/Adium Framework/Source/AIContextMenuTextView.m"; sourceTree = "<group>"; };
@@ -4428,8 +4430,8 @@
 		8184C5B30C1B812500CB53E7 /* AMPurpleRequestFieldsWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xib; name = AMPurpleRequestFieldsWindow.xib; path = "Plugins/Purple Service/AMPurpleRequestFieldsWindow.xib"; sourceTree = "<group>"; };
 		8184CC330C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMPurpleJabberMoodTooltip.h; path = "Plugins/Purple Service/AMPurpleJabberMoodTooltip.h"; sourceTree = "<group>"; };
 		8184CC340C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMPurpleJabberMoodTooltip.m; path = "Plugins/Purple Service/AMPurpleJabberMoodTooltip.m"; sourceTree = "<group>"; };
-		818E96A10C16D443007623BD /* AMXMLConsoleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMXMLConsoleController.h; path = "Plugins/Purple Service/AMXMLConsoleController.h"; sourceTree = "<group>"; };
-		818E96A20C16D443007623BD /* AMXMLConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMXMLConsoleController.m; path = "Plugins/Purple Service/AMXMLConsoleController.m"; sourceTree = "<group>"; };
+		818E96A10C16D443007623BD /* AIJabberConsoleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIJabberConsoleController.h; path = "Plugins/Purple Service/AIJabberConsoleController.h"; sourceTree = "<group>"; };
+		818E96A20C16D443007623BD /* AIJabberConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIJabberConsoleController.m; path = "Plugins/Purple Service/AIJabberConsoleController.m"; sourceTree = "<group>"; };
 		81DAE8700C261E8A00780E4C /* AMPurpleTuneTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMPurpleTuneTooltip.h; path = "Plugins/Purple Service/AMPurpleTuneTooltip.h"; sourceTree = "<group>"; };
 		81DAE8710C261E8A00780E4C /* AMPurpleTuneTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMPurpleTuneTooltip.m; path = "Plugins/Purple Service/AMPurpleTuneTooltip.m"; sourceTree = "<group>"; };
 		81DAED500C26F4F700780E4C /* AMPurpleJabberServiceDiscoveryBrowsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMPurpleJabberServiceDiscoveryBrowsing.h; path = "Plugins/Purple Service/AMPurpleJabberServiceDiscoveryBrowsing.h"; sourceTree = "<group>"; };
@@ -5394,9 +5396,8 @@
 				4BB19298079EE90900DAA523 /* PurpleDefaultsJabber.plist */,
 				63125D7A0A75EBBE00303EE9 /* LiveJournal */,
 				A3C0405808D744B200B48CE1 /* Google Talk */,
-				818E96A10C16D443007623BD /* AMXMLConsoleController.h */,
-				818E96A20C16D443007623BD /* AMXMLConsoleController.m */,
-				346544D90C8F686B0046ED68 /* AMPurpleJabberXMLConsole.xib */,
+				818E96A10C16D443007623BD /* AIJabberConsoleController.h */,
+				818E96A20C16D443007623BD /* AIJabberConsoleController.m */,
 				8184CC330C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.h */,
 				8184CC340C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.m */,
 				346545090C8F69280046ED68 /* Discovery Browsing */,
@@ -5620,7 +5621,6 @@
 				3465451B0C8F6A670046ED68 /* AMPurpleJabberServiceDiscoveryBrowserController.m */,
 				346545230C8F6AAD0046ED68 /* AMPurpleJabberNode.h */,
 				346545240C8F6AAD0046ED68 /* AMPurpleJabberNode.m */,
-				346544DA0C8F686B0046ED68 /* AMPurpleJabberDiscoveryBrowser.xib */,
 			);
 			name = "Discovery Browsing";
 			sourceTree = "<group>";
@@ -5983,6 +5983,8 @@
 				34E4CD510E68277D00D1B0DC /* ESIRCJoinChatView.xib */,
 				34E4CD500E68277D00D1B0DC /* ESIRCJoinChatViewController.h */,
 				34E4CD4F0E68277D00D1B0DC /* ESIRCJoinChatViewController.m */,
+				76FF925814B524B40043E23B /* AIIRCConsoleController.h */,
+				76FF925914B524B40043E23B /* AIIRCConsoleController.m */,
 				11AE5575109CCC950074BDC2 /* irc-small.png */,
 				34E4CD640E68279C00D1B0DC /* irc.png */,
 				34E4CD650E68279C00D1B0DC /* PurpleDefaultsIRC.plist */,
@@ -8083,6 +8085,16 @@
 			name = "HTTP Server";
 			sourceTree = "<group>";
 		};
+		76FF925C14B60B4B0043E23B /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				76FF926314B62A980043E23B /* AIConsole.nib */,
+				76FF926514B62AB80043E23B /* AIConsoleController.h */,
+				76FF926614B62AB80043E23B /* AIConsoleController.m */,
+			);
+			name = Console;
+			sourceTree = "<group>";
+		};
 		7E824CCD06387FAF00813072 /* Link Management */ = {
 			isa = PBXGroup;
 			children = (
@@ -8584,6 +8596,7 @@
 				4B422C0A05ACB248005E720B /* AISortController.m */,
 				4B4F5B2D042D645F00A8010A /* Accounts & Services */,
 				636D930E0E4E9DDD00E5F558 /* Address Book Integration */,
+				76FF925C14B60B4B0043E23B /* Console */,
 				34B70349076EDB410016E8BA /* Contact Alerts */,
 				340F444F06D87A830072E2FA /* Contact List */,
 				F5300A2B032F760B01A8010A /* Contacts & Chats */,
@@ -8859,7 +8872,7 @@
 				344499E90B23CA5D0054B761 /* adiumPurpleAccounts.h in Headers */,
 				34B1268E0B924E28003B0451 /* adiumPurpleDnsRequest.h in Headers */,
 				34A663920BF66D96008637BB /* PurpleCommon.h in Headers */,
-				818E96A30C16D443007623BD /* AMXMLConsoleController.h in Headers */,
+				818E96A30C16D443007623BD /* AIJabberConsoleController.h in Headers */,
 				8184C5A50C1B803400CB53E7 /* AMPurpleRequestFieldsController.h in Headers */,
 				8184CC350C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.h in Headers */,
 				81DAE8720C261E8A00780E4C /* AMPurpleTuneTooltip.h in Headers */,
@@ -8897,6 +8910,7 @@
 				34D8154613B663700022C8C4 /* JSONKit.h in Headers */,
 				34D8154E13B663A80022C8C4 /* auth_fb.h in Headers */,
 				34D8155013B663A80022C8C4 /* fbapi.h in Headers */,
+				76FF925A14B524B40043E23B /* AIIRCConsoleController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8904,6 +8918,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76FF926714B62AB80043E23B /* AIConsoleController.h in Headers */,
 				11819A1B10D0B95D003E8ECA /* AIMediaControllerProtocol.h in Headers */,
 				111D58210F7FC1B900883487 /* AIListContactGroupChatCell.h in Headers */,
 				1164A90D0F7AD4AB00110AE4 /* AIContentTopic.h in Headers */,
@@ -9025,8 +9040,6 @@
 				112B47670F82E0FC00690E84 /* AIXtraInfo.h in Headers */,
 				34F17FCE0F8EAC34009C5A39 /* AIListOutlineView+Drawing.h in Headers */,
 				63B0EC9D0F8FBB660062476B /* AIProxyListObject.h in Headers */,
-				979AA6A714D59DC8008730DF /* AIBoolToControlTextColorTransformer.h in Headers */,
-				5A1E24A915BC746B003A6F9E /* AIAdvancedPreferencePane.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9448,8 +9461,6 @@
 				8184C5B80C1B812500CB53E7 /* AMPurpleRequestFieldsWindow.xib in Resources */,
 				8181EEBE0C30673E00E802F7 /* AMPurpleSearchResultsWindow.xib in Resources */,
 				8173C5760C4C3DB800C9E64E /* downloadprogress.png in Resources */,
-				346544DB0C8F686B0046ED68 /* AMPurpleJabberXMLConsole.xib in Resources */,
-				346544DC0C8F686B0046ED68 /* AMPurpleJabberDiscoveryBrowser.xib in Resources */,
 				343BB5C40C96D57900506F9B /* PurpleDefaultsMySpace.plist in Resources */,
 				343BB63B0C96DC1100506F9B /* MySpace-small.png in Resources */,
 				343BB63C0C96DC1100506F9B /* MySpace-large.png in Resources */,
@@ -9789,6 +9800,7 @@
 				1199AB0710BE13E600646322 /* Deny.tiff in Resources */,
 				1199AB0810BE13E600646322 /* Ignore.tiff in Resources */,
 				C699374B15F75FB2007EFFA0 /* stackImage@2x.png in Resources */,
+				76FF926414B62A980043E23B /* AIConsole.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10010,7 +10022,7 @@
 				34D073D20B1E1A4500D63DF2 /* ESAIMService.m in Sources */,
 				344499EA0B23CA5D0054B761 /* adiumPurpleAccounts.m in Sources */,
 				34B1268F0B924E28003B0451 /* adiumPurpleDnsRequest.m in Sources */,
-				818E96A40C16D443007623BD /* AMXMLConsoleController.m in Sources */,
+				818E96A40C16D443007623BD /* AIJabberConsoleController.m in Sources */,
 				8184C5A60C1B803400CB53E7 /* AMPurpleRequestFieldsController.m in Sources */,
 				8184CC360C1E3C3800CB53E7 /* AMPurpleJabberMoodTooltip.m in Sources */,
 				81DAE8730C261E8A00780E4C /* AMPurpleTuneTooltip.m in Sources */,
@@ -10051,6 +10063,7 @@
 				34D8154713B663700022C8C4 /* JSONKit.m in Sources */,
 				34D8154D13B663A80022C8C4 /* auth_fb.c in Sources */,
 				34D8154F13B663A80022C8C4 /* fbapi.c in Sources */,
+				76FF925B14B524B40043E23B /* AIIRCConsoleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10506,8 +10519,7 @@
 				112B47680F82E0FC00690E84 /* AIXtraInfo.m in Sources */,
 				34F17FCF0F8EAC34009C5A39 /* AIListOutlineView+Drawing.m in Sources */,
 				63B0EC9C0F8FBB660062476B /* AIProxyListObject.m in Sources */,
-				979AA6A814D59DC8008730DF /* AIBoolToControlTextColorTransformer.m in Sources */,
-				5A1E24AA15BC746B003A6F9E /* AIAdvancedPreferencePane.m in Sources */,
+				76FF926814B62AB80043E23B /* AIConsoleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
