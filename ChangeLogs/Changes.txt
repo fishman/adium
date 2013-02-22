@@ -10,6 +10,10 @@ Version 1.6 (X/X/X)
  Accessibility
   * Fixed tabs not being spoken by VoiceOver. (#16088)
 
+Version 1.5.5 (X/X/X)
+ * Fixed "Add Link..." when the cursor is at the end of the line. (#16200)
+ * Updated Spanish translation. (#16291)
+
  Chat window
   * Fixed an issue that occurred when dragging a conversation window into an existing tabbed conversation window. (#16281)
   * Made the Shift-Return keyboard shortcut add a newline the way Alt-Return does. (Detmud) (#16285)
