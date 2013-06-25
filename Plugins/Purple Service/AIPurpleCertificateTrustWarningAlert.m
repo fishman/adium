@@ -26,8 +26,6 @@
 
 //#define ALWAYS_SHOW_TRUST_WARNING
 
-static NSMutableDictionary *acceptedCertificates = nil;
-
 @interface AIPurpleCertificateTrustWarningAlert ()
 - (id)initWithAccount:(AIAccount*)account
 			 hostname:(NSString*)hostname
@@ -76,8 +74,6 @@ static NSMutableDictionary *acceptedCertificates = nil;
 			 userData:(void*)ud
 {
 	if((self = [super init])) {
-		if(!acceptedCertificates)
-			acceptedCertificates = [[NSMutableDictionary alloc] init];
 		query_cert_cb = _query_cert_cb;
 		
 		certificates = certs;
@@ -107,23 +103,6 @@ static NSMutableDictionary *acceptedCertificates = nil;
 	
 	CSSM_DATA data;
 	err = SecCertificateGetData((SecCertificateRef)CFArrayGetValueAtIndex(certificates, 0), &data);
-	if(err == noErr) {
-		// Did we ask the user to confirm this certificate before?
-		// Note that this information is not stored on the disk, which is on purpose.
-		NSUInteger oldCertHash = [[acceptedCertificates objectForKey:hostname] unsignedIntegerValue];
-		if (oldCertHash) {
-			NSData *certData = [[NSData alloc] initWithBytesNoCopy:data.Data length:data.Length freeWhenDone:NO];
-			NSUInteger newCertHash = [certData hash];
-			[certData release];
-			
-			if (oldCertHash == newCertHash) {
-				query_cert_cb(true, userdata);
-				[self release];
-				return;
-			}
-		}
-	}
-		
 	
 	err = SecPolicySearchCreate(CSSM_CERT_X_509v3, &CSSMOID_APPLE_TP_SSL, NULL, &searchRef);
 	if(err != noErr) {
@@ -272,7 +251,7 @@ static SecPolicyRef SSLSecPolicyCopy()
 					 didEndSelector:@selector(certificateTrustSheetDidEnd:returnCode:contextInfo:)
 						contextInfo:window
 							  trust:trustRef
-							message:title];	
+							message:title];
 }
 
 
@@ -286,17 +265,6 @@ static SecPolicyRef SSLSecPolicyCopy()
 	NSWindow *parentWindow = (NSWindow *)contextInfo;
 
 	query_cert_cb(didTrustCerficate, userdata);
-	/* If the user confirmed this cert, we store this information until the app is closed so the user doesn't have to re-confirm it every time
-	 * (doing otherwise might be particularily annoying on auto-reconnect)
-	 */
-	if (didTrustCerficate) {
-		CSSM_DATA certdata;
-		OSStatus err = SecCertificateGetData((SecCertificateRef)CFArrayGetValueAtIndex(certificates, 0), &certdata);
-		if(err == noErr) {
-			[acceptedCertificates setObject:[NSNumber numberWithUnsignedInteger:[[NSData dataWithBytes:certdata.Data length:certdata.Length] hash]]
-									 forKey:hostname];
-		}
-	}
 
 	[trustpanel release];
 
