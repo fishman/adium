@@ -37,7 +37,6 @@
 #import "OTRCommon.h"
 #import "AIOTRSMPSecretAnswerWindowController.h"
 #import "AIOTRSMPSharedSecretWindowController.h"
-#import "AIOTRTopBarLoggingWarningController.h"
 #import "AIOTRTopBarUnverifiedContactController.h"
 #import "AIMessageViewController.h"
 
@@ -791,29 +790,27 @@ handle_smp_event_cb(void *opdata, OtrlSMPEvent smp_event, ConnContext *context, 
 		}
 		case OTRL_SMPEVENT_CHEATED:
 		case OTRL_SMPEVENT_ERROR:
-		/* case OTRL_SMPEVENT_FAILURE: */ // I'm not actually sure what this event indicates, but it's not fatal failure of SMP.
+		case OTRL_SMPEVENT_FAILURE:
 		case OTRL_SMPEVENT_ABORT: {
-			NSString *localizedMessage = [NSString stringWithFormat:AILocalizedStringFromTableInBundle(@"Failed to verify %@'s identity.",
-																									   nil,
-																									   [NSBundle bundleForClass:[AdiumOTREncryption class]], nil),
-										  listContact.UID];
+			NSString *localizedMessage = AILocalizedStringFromTableInBundle(@"The secret question was <b>not</b> answered correctly. You might be talking to an imposter.",
+																			nil,
+																			[NSBundle bundleForClass:[AdiumOTREncryption class]], nil);
 			
 			AIChat *chat = chatForContext(context);
 			if (!chat) chat = [adium.chatController chatWithContact:listContact];
-			[adium.contentController displayEvent:[[AIHTMLDecoder decodeHTML:localizedMessage] string]
+			[adium.contentController displayEvent:localizedMessage
 										   ofType:@"encryption"
 										   inChat:chat];
 			break;
 		}
 		case OTRL_SMPEVENT_SUCCESS: {
-			NSString *localizedMessage = [NSString stringWithFormat:AILocalizedStringFromTableInBundle(@"Successfully verified %@'s identity.",
-																									   nil,
-																									   [NSBundle bundleForClass:[AdiumOTREncryption class]], nil),
-										  listContact.UID];
+			NSString *localizedMessage = AILocalizedStringFromTableInBundle(@"The secret question was answered correctly.",
+																			nil,
+																			[NSBundle bundleForClass:[AdiumOTREncryption class]], nil);
 			
 			AIChat *chat = chatForContext(context);
 			if (!chat) chat = [adium.chatController chatWithContact:listContact];
-			[adium.contentController displayEvent:[[AIHTMLDecoder decodeHTML:localizedMessage] string]
+			[adium.contentController displayEvent:localizedMessage
 										   ofType:@"encryption"
 										   inChat:chat];
 			otrg_plugin_write_fingerprints();
@@ -1072,18 +1069,9 @@ void update_security_details_for_context(ConnContext *context)
 			fullSecurityDetailsDict = nil;	
 		}
 		
-		
-		NSInteger oldEncryptionStatus = [[[inChat securityDetails] objectForKey:@"EncryptionStatus"] integerValue];
-		
 		[inChat setSecurityDetails:fullSecurityDetailsDict];
 		
 		NSInteger newEncryptionStatus = [[securityDetailsDict objectForKey:@"EncryptionStatus"] integerValue];
-		
-		if (newEncryptionStatus != EncryptionStatus_None && oldEncryptionStatus == EncryptionStatus_None && inChat.shouldLog) {
-			AIOTRTopBarLoggingWarningController *warningController = [[AIOTRTopBarLoggingWarningController alloc] init];
-			AIMessageViewController *mvc = [[inChat chatContainer] messageViewController];
-			[mvc addTopBarController:warningController];
-		}
 		
 		if (newEncryptionStatus == EncryptionStatus_Unverified) {
 			AIOTRTopBarUnverifiedContactController *warningController = [[AIOTRTopBarUnverifiedContactController alloc] init];
@@ -1103,7 +1091,7 @@ send_default_query_to_chat(AIChat *inChat)
 											 policyForContact([inChat listObject]));
 	
 	[adium.contentController sendRawMessage:[NSString stringWithUTF8String:(msg ? msg : "?OTRv2?")]
-															 toContact:[inChat listObject]];
+								  toContact:[inChat listObject]];
 	if (msg)
 		free(msg);
 }
