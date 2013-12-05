@@ -587,7 +587,7 @@ max_message_size_cb(void *opdata, ConnContext *context)
 	
 	AIChat *chat = chatForContext(context);
 	
-	/* Values from http://www.cypherpunks.ca/otr/UPGRADING-libotr-3.1.0.txt */
+	/* Values from https://otr.cypherpunks.ca/UPGRADING-libotr-3.1.0.txt */
 	static NSDictionary *maxSizeByServiceClassDict = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{

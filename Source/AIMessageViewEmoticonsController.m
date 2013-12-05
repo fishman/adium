@@ -20,8 +20,11 @@
 #import <Adium/AIEmoticonPack.h>
 #import <Adium/AIEmoticon.h>
 #import <AIUtilities/AIImageDrawingAdditions.h>
+#import "AIMessageEntryTextView.h"
 
 #define PREFERENCES_GROUP_EMOTICONS	@"Emoticons"
+
+#define MENU_PADDING    15  // Padding between emoticons button and displayed emoticons menu
 
 
 #pragma mark AIMessageViewEmoticonsController
@@ -80,6 +83,13 @@
 		
 		if ([activePacks count] > 0) {
 			for (pack in activePacks) {
+				//Add some blank entries to visually separate packs
+				while (icons.count % 10 != 0) {
+					[icons addObject:@""];
+					[titles addObject:@""];
+					[symbols addObject:@""];
+				}
+				
 				for (emoticon in [pack enabledEmoticons]) {
 					[icons addObject:[[emoticon image] imageByScalingForMenuItem]];
 					[titles addObject:[emoticon name]];
@@ -104,6 +114,17 @@
 		// Adjust opening position
 		aPoint.x -= [menu size].width;
 
+        // add padding to prevent button being covered by menu
+        NSPoint screenPoint = [aView.window convertBaseToScreen:aPoint];
+        if (screenPoint.y - MENU_PADDING - [menu size].height < 20) {
+            // position the menu above the button if it would be to near to the screen's bottom edge otherwise
+            // - this prevents the view automatically being repositioned by cocoa and therefore covering the button again
+            aPoint.y = aPoint.y - MENU_PADDING - [menu size].height;
+        }
+        else {
+            aPoint.y += MENU_PADDING/2;
+        }
+
 		[menu popUpMenuPositioningItem:[menu itemAtIndex:0]
 							atLocation:aPoint
 								inView:[aView superview]];
@@ -127,21 +148,29 @@
 
 - (BOOL)imageCollectionView:(AIImageCollectionView *)collectionView shouldHighlightItemAtIndex:(NSUInteger)anIndex
 {	
-	return (anIndex < [[self emoticons] count]);
+	if (anIndex >= [[self emoticons] count])
+		return NO;
+	if ([[[self emoticonSymbols] objectAtIndex:anIndex] isEqualToString:@""])
+		return NO;
+	return YES;
 }
 
 - (void)imageCollectionView:(AIImageCollectionView *)collectionView didHighlightItemAtIndex:(NSUInteger)anIndex
 {
 	if (anIndex < [[self emoticons] count]) {
 		// Update Title and Symbol (Text Equivalent)
-		[[self emoticonTitleLabel] setTitleWithMnemonic:[[self emoticonTitles] objectAtIndex:anIndex]];
-		[[self emoticonSymbolLabel] setTitleWithMnemonic:[[self emoticonSymbols] objectAtIndex:anIndex]];
+		[[self emoticonTitleLabel] setStringValue:[[self emoticonTitles] objectAtIndex:anIndex]];
+		[[self emoticonSymbolLabel] setStringValue:[[self emoticonSymbols] objectAtIndex:anIndex]];
 	}
 }
 
 - (BOOL)imageCollectionView:(AIImageCollectionView *)imageCollectionView shouldSelectItemAtIndex:(NSUInteger)anIndex
 {
-	return (anIndex < [[self emoticons] count]);
+	if (anIndex >= [[self emoticons] count])
+		return NO;
+	if ([[[self emoticonSymbols] objectAtIndex:anIndex] isEqualToString:@""])
+		return NO;
+	return YES;
 }
 
 - (void)imageCollectionView:(AIImageCollectionView *)imageCollectionView didSelectItemAtIndex:(NSUInteger)anIndex
