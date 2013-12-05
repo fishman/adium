@@ -25,52 +25,19 @@
 #import "AdiumOTREncryption.h"
 
 @interface ESOTRUnknownFingerprintController ()
-+ (void)showFingerprintPromptWithMessageString:(NSString *)messageString 
-								  acceptButton:(NSString *)acceptButton
-									denyButton:(NSString *)denyButton
-								  responseInfo:(NSDictionary *)responseInfo;
 + (void)unknownFingerprintResponseInfo:(NSDictionary *)responseInfo wasAccepted:(BOOL)fingerprintAccepted;
 @end
 
 @implementation ESOTRUnknownFingerprintController
 
-+ (void)showUnknownFingerprintPromptWithResponseInfo:(NSDictionary *)responseInfo
-{
-	NSString	*messageString;
-	AIAccount	*account = [responseInfo objectForKey:@"AIAccount"];
-	NSString	*who = [responseInfo objectForKey:@"who"];
-	NSString	*theirHash = [responseInfo objectForKey:@"Their Fingerprint"];
-	
-	messageString = [NSString stringWithFormat:
-		AILocalizedString(@"%@ wants to start an encrypted conversation with you (%@).\n\n"
-						  @"However, for this chat to be securely encrypted, you should verify their identity by checking their fingerprint. For the best security, it is recommended to use a different form of communication to do this.\n\n"
-						  @"Purported fingerprint for %@:\n\n%@\n\n"
-						  @"Have you verified this fingerprint to be correct?",nil),
-		who,
-		account.formattedUID,
-		who,
-		theirHash];
-	
-	[self showFingerprintPromptWithMessageString:messageString
-									acceptButton:AILocalizedString(@"Yes",nil)
-									  denyButton:AILocalizedString(@"Verify Later",nil)
-									responseInfo:responseInfo];
-}
-
 + (void)showVerifyFingerprintPromptWithResponseInfo:(NSDictionary *)responseInfo
 {
 	NSString	*messageString;
-	AIAccount	*account = [responseInfo objectForKey:@"AIAccount"];
 	NSString	*who = [responseInfo objectForKey:@"who"];
-	NSString	*ourHash = [responseInfo objectForKey:@"Our Fingerprint"];
 	NSString	*theirHash = [responseInfo objectForKey:@"Their Fingerprint"];
 
 	messageString = [NSString stringWithFormat:
-		AILocalizedString(@"Fingerprint for you (%@): %@\n\n"
-						  "Purported fingerprint for %@: %@\n\n"
-						  "Is this the verifiably correct fingerprint for %@?",nil),
-		account.formattedUID,
-		ourHash,
+		AILocalizedString(@"Fingerprint for %@: %@\n\nHave you verified this is %@\xe2\x80\x99s fingerprint?",nil),
 		who,
 		theirHash,
 		who];
@@ -187,7 +154,8 @@
 		//Write the new info to disk, redraw the UI
 		otrg_plugin_write_fingerprints();
 		otrg_ui_update_keylist();
-    }	
+		update_security_details_for_context(context);
+    }
 }
 
 @end

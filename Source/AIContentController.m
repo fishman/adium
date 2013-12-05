@@ -21,6 +21,7 @@
 #import "AdiumFormatting.h"
 #import "AdiumMessageEvents.h"
 #import "AdiumContentFiltering.h"
+#import "AdiumOTREncryption.h"
 
 #import <Adium/AIAccountControllerProtocol.h>
 #import <Adium/AIChatControllerProtocol.h>
@@ -872,7 +873,7 @@
 	[encryptionMenu addItem:menuItem];
 	[menuItem release];
 	
-	menuItem = [[NSMenuItem alloc] initWithTitle:AILocalizedString(@"Encrypt chats as requested",nil)
+	menuItem = [[NSMenuItem alloc] initWithTitle:AILocalizedString(@"Allow chat encryption",nil)
 										  target:target
 										  action:@selector(selectedEncryptionPreference:)
 								   keyEquivalent:@""];
@@ -881,7 +882,7 @@
 	[encryptionMenu addItem:menuItem];
 	[menuItem release];
 	
-	menuItem = [[NSMenuItem alloc] initWithTitle:AILocalizedString(@"Encrypt chats automatically",nil)
+	menuItem = [[NSMenuItem alloc] initWithTitle:AILocalizedString(@"Use chat encryption when available",nil)
 										  target:target
 										  action:@selector(selectedEncryptionPreference:)
 								   keyEquivalent:@""];
