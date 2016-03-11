@@ -354,7 +354,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Adium</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.5.11b2, Copyright © 2001-2015 The Adium Team</string>
+	<string>1.5.11b3, Copyright © 2001-2016 The Adium Team</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>AdiumHelp</string>
 	<key>CFBundleHelpBookName</key>
@@ -370,7 +370,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5.11b2</string>
+	<string>1.5.11b3</string>
 	<key>CFBundleSignature</key>
 	<string>AdIM</string>
 	<key>CFBundleURLTypes</key>
@@ -469,7 +469,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.5.11b2</string>
+	<string>1.5.11b3</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.social-networking</string>
 	<key>LSFileQuarantineEnabled</key>
@@ -489,7 +489,7 @@
 	<key>SUCheckAtStartup</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://www.adium.im/sparkle/update.php</string>
+	<string>https://www.adium.im/sparkle/update.php</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUScheduledCheckInterval</key>
